@@ -1,0 +1,37 @@
+# config.yml
+# ---
+# Main configuration for the policy comparison script
+
+# Thresholds for various similarity and classification scores
+thresholds:
+  # Minimum Jaccard score to be considered a partial match
+  jaccard_similarity: 0.5
+
+  # Minimum Cosine Similarity score for semantic text matching
+  cosine_similarity: 0.7
+
+  # Final classification threshold. A score above this is an 'UPDATE'.
+  classification: 0.8
+
+# File paths for input and output
+# (You can add paths for rules CSV, output JSON, etc. here)
+# config.yml
+
+paths:
+  # The CSV file containing all rules, grouped by a rule ID.
+  rules_csv: 'rules.csv'  # ⬅️ This line is likely missing or misspelled
+
+  # The new policy JSON file to be analyzed.
+  policy_json: 'policy_sample.json'
+
+  # The location of the weights configuration file.
+  weights_file: 'weights.yml'
+
+  # Where to save the final analysis output.
+  output_json: 'policy-rule-match-analysis_results.json'
+
+# ... rest of the file
+
+# Model settings (e.g., for embeddings)
+models:
+  embedding_model: 'sentence-transformers/all-MiniLM-L6-v2'
