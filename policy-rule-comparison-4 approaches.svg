@@ -1,0 +1,592 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2008pt" height="2625pt" viewBox="0.00 0.00 2008.00 2625.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 2621.2)">
+<title>All_Four_Approaches_Clear_Flow</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-2621.2 2004,-2621.2 2004,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="1000" y="-11.2" font-family="Arial" font-size="24.00">A Simple Comparison of Four Policy Analysis Workflows</text>
+<g id="clust1" class="cluster">
+<title>cluster_A1</title>
+<polygon fill="#f8f9fa" stroke="black" points="8,-1106.6 8,-2609.2 292,-2609.2 292,-1106.6 8,-1106.6"/>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-2589" font-family="Arial" font-size="18.00">Approach 1: Score-All-then-Sort</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_A1_loop</title>
+<polygon fill="none" stroke="black" stroke-dasharray="5,2" points="16,-1813.6 16,-2106 284,-2106 284,-1813.6 16,-1813.6"/>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-2085.8" font-family="Arial" font-size="18.00">Stage 1: Scoring Loop</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_A1_analysis</title>
+<polygon fill="#f0f8ff" stroke="black" points="16,-1461.4 16,-1753.8 284,-1753.8 284,-1461.4 16,-1461.4"/>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-1733.6" font-family="Arial" font-size="18.00">Stage 2: Final Analysis</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_A2</title>
+<polygon fill="#f8f9fa" stroke="black" points="332,-44.8 332,-2609.2 902,-2609.2 902,-44.8 332,-44.8"/>
+<text xml:space="preserve" text-anchor="middle" x="617" y="-2589" font-family="Arial" font-size="18.00">Approach 2: Filter-then-Rank</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_A2_prep</title>
+<polygon fill="#f0f8ff" stroke="black" points="586,-2150 586,-2267.6 854,-2267.6 854,-2150 586,-2150"/>
+<text xml:space="preserve" text-anchor="middle" x="720" y="-2247.4" font-family="Arial" font-size="18.00">Stage 1: Preparation</text>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_A2_loop</title>
+<polygon fill="none" stroke="black" stroke-dasharray="5,2" points="340,-1461.4 340,-2106 894,-2106 894,-1461.4 340,-1461.4"/>
+<text xml:space="preserve" text-anchor="middle" x="617" y="-2085.8" font-family="Arial" font-size="18.00">Stage 2: Filtering</text>
+</g>
+<g id="clust7" class="cluster">
+<title>cluster_A2_analysis</title>
+<polygon fill="#f0f8ff" stroke="black" points="579,-489.6 579,-1046.8 847,-1046.8 847,-489.6 579,-489.6"/>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-1026.6" font-family="Arial" font-size="18.00">Stage 3: Final Decision</text>
+</g>
+<g id="clust8" class="cluster">
+<title>cluster_A3</title>
+<polygon fill="#f8f9fa" stroke="black" points="942,-399.6 942,-2609.2 1427,-2609.2 1427,-399.6 942,-399.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1184.5" y="-2589" font-family="Arial" font-size="18.00">Approach 3: Hybrid Model</text>
+</g>
+<g id="clust9" class="cluster">
+<title>cluster_A3_prep</title>
+<polygon fill="#f0f8ff" stroke="black" points="1028,-2150 1028,-2267.6 1296,-2267.6 1296,-2150 1028,-2150"/>
+<text xml:space="preserve" text-anchor="middle" x="1162" y="-2247.4" font-family="Arial" font-size="18.00">Stage 1: Preparation</text>
+</g>
+<g id="clust10" class="cluster">
+<title>cluster_A3_loop</title>
+<polygon fill="none" stroke="black" stroke-dasharray="5,2" points="950,-1636.2 950,-2106 1419,-2106 1419,-1636.2 950,-1636.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1184.5" y="-2085.8" font-family="Arial" font-size="18.00">Stage 2: Filtering</text>
+</g>
+<g id="clust11" class="cluster">
+<title>cluster_A3_analysis</title>
+<polygon fill="#f0f8ff" stroke="black" points="1034,-754.4 1034,-1314.2 1302,-1314.2 1302,-754.4 1034,-754.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-1294" font-family="Arial" font-size="18.00">Stage 3: Final Analysis</text>
+</g>
+<g id="clust12" class="cluster">
+<title>cluster_A4</title>
+<polygon fill="#f8f9fa" stroke="black" points="1435,-44.8 1435,-2609.2 1992,-2609.2 1992,-44.8 1435,-44.8"/>
+<text xml:space="preserve" text-anchor="middle" x="1713.5" y="-2589" font-family="Arial" font-size="18.00">Approach 4: Attribute-Set Comparison</text>
+</g>
+<g id="clust13" class="cluster">
+<title>cluster_A4_loop</title>
+<polygon fill="none" stroke="black" stroke-dasharray="5,2" points="1582,-1461.4 1582,-2106 1850,-2106 1850,-1461.4 1582,-1461.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1716" y="-2085.8" font-family="Arial" font-size="18.00">Stage 1: Scoring Loop</text>
+</g>
+<g id="clust14" class="cluster">
+<title>cluster_A4_analysis</title>
+<polygon fill="#f0f8ff" stroke="black" points="1443,-489.6 1443,-1314.2 1918,-1314.2 1918,-489.6 1443,-489.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1680.5" y="-1294" font-family="Arial" font-size="18.00">Stage 2: Final Decision &amp; Validation</text>
+</g>
+<!-- A1_Start -->
+<g id="node1" class="node">
+<title>A1_Start</title>
+<ellipse fill="#d4edda" stroke="black" cx="150" cy="-2445.6" rx="126" ry="126"/>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-2441.4" font-family="Arial" font-size="14.00">Start</text>
+</g>
+<!-- A1_LoadData -->
+<g id="node3" class="node">
+<title>A1_LoadData</title>
+<path fill="#e6f7ff" stroke="black" d="M264,-2230C264,-2230 36,-2230 36,-2230 30,-2230 24,-2224 24,-2218 24,-2218 24,-2170 24,-2170 24,-2164 30,-2158 36,-2158 36,-2158 264,-2158 264,-2158 270,-2158 276,-2164 276,-2170 276,-2170 276,-2218 276,-2218 276,-2224 270,-2230 264,-2230"/>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-2189.8" font-family="Arial" font-size="14.00">Load Policy &amp; All Rules</text>
+</g>
+<!-- A1_Start&#45;&gt;A1_LoadData -->
+<g id="edge4" class="edge">
+<title>A1_Start-&gt;A1_LoadData</title>
+<path fill="none" stroke="black" d="M150,-2319.43C150,-2319.43 150,-2241.97 150,-2241.97"/>
+<polygon fill="black" stroke="black" points="153.5,-2241.97 150,-2231.97 146.5,-2241.97 153.5,-2241.97"/>
+</g>
+<!-- A1_End -->
+<g id="node2" class="node">
+<title>A1_End</title>
+<ellipse fill="#ced4da" stroke="black" cx="150" cy="-1240.6" rx="126" ry="126"/>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-1236.4" font-family="Arial" font-size="14.00">End</text>
+</g>
+<!-- A1_LoopStart -->
+<g id="node4" class="node">
+<title>A1_LoopStart</title>
+<path fill="lightgrey" stroke="none" d="M264,-2068.4C264,-2068.4 36,-2068.4 36,-2068.4 30,-2068.4 24,-2062.4 24,-2056.4 24,-2056.4 24,-2008.4 24,-2008.4 24,-2002.4 30,-1996.4 36,-1996.4 36,-1996.4 264,-1996.4 264,-1996.4 270,-1996.4 276,-2002.4 276,-2008.4 276,-2008.4 276,-2056.4 276,-2056.4 276,-2062.4 270,-2068.4 264,-2068.4"/>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-2028.2" font-family="Arial" font-size="14.00">For EVERY Rule...</text>
+</g>
+<!-- A1_LoadData&#45;&gt;A1_LoopStart -->
+<!-- A1_CalculateScore -->
+<g id="node5" class="node">
+<title>A1_CalculateScore</title>
+<path fill="#e6f7ff" stroke="black" d="M264,-1893.6C264,-1893.6 36,-1893.6 36,-1893.6 30,-1893.6 24,-1887.6 24,-1881.6 24,-1881.6 24,-1833.6 24,-1833.6 24,-1827.6 30,-1821.6 36,-1821.6 36,-1821.6 264,-1821.6 264,-1821.6 270,-1821.6 276,-1827.6 276,-1833.6 276,-1833.6 276,-1881.6 276,-1881.6 276,-1887.6 270,-1893.6 264,-1893.6"/>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-1861.8" font-family="Arial" font-size="14.00">Calculate Full</text>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-1845" font-family="Arial" font-size="14.00">Composite Score</text>
+</g>
+<!-- A1_LoopStart&#45;&gt;A1_CalculateScore -->
+<g id="edge1" class="edge">
+<title>A1_LoopStart-&gt;A1_CalculateScore</title>
+<path fill="none" stroke="black" d="M192,-1996.6C192,-1996.6 192,-1905.46 192,-1905.46"/>
+<polygon fill="black" stroke="black" points="195.5,-1905.46 192,-1895.46 188.5,-1905.46 195.5,-1905.46"/>
+</g>
+<!-- A1_CalculateScore&#45;&gt;A1_LoopStart -->
+<g id="edge2" class="edge">
+<title>A1_CalculateScore-&gt;A1_LoopStart</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M108,-1893.82C108,-1893.82 108,-1985.01 108,-1985.01"/>
+<polygon fill="black" stroke="black" points="104.5,-1985.01 108,-1995.01 111.5,-1985.01 104.5,-1985.01"/>
+<text xml:space="preserve" text-anchor="middle" x="212.58" y="-1940.8" font-family="Times,serif" font-size="14.00">Next Rule</text>
+</g>
+<!-- A1_Analyze -->
+<g id="node6" class="node">
+<title>A1_Analyze</title>
+<path fill="#d1ecf1" stroke="black" d="M264,-1716.2C264,-1716.2 36,-1716.2 36,-1716.2 30,-1716.2 24,-1710.2 24,-1704.2 24,-1704.2 24,-1656.2 24,-1656.2 24,-1650.2 30,-1644.2 36,-1644.2 36,-1644.2 264,-1644.2 264,-1644.2 270,-1644.2 276,-1650.2 276,-1656.2 276,-1656.2 276,-1704.2 276,-1704.2 276,-1710.2 270,-1716.2 264,-1716.2"/>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-1676" font-family="Arial" font-size="14.00">Sort ALL Rules by Score</text>
+</g>
+<!-- A1_CalculateScore&#45;&gt;A1_Analyze -->
+<g id="edge6" class="edge">
+<title>A1_CalculateScore-&gt;A1_Analyze</title>
+<path fill="none" stroke="black" d="M150,-1821.27C150,-1821.27 150,-1727.99 150,-1727.99"/>
+<polygon fill="black" stroke="black" points="153.5,-1727.99 150,-1717.99 146.5,-1727.99 153.5,-1727.99"/>
+<text xml:space="preserve" text-anchor="middle" x="209.44" y="-1766" font-family="Times,serif" font-size="14.00">After all rules are scored...</text>
+</g>
+<!-- A1_Output -->
+<g id="node7" class="node">
+<title>A1_Output</title>
+<polygon fill="#fefee3" stroke="black" points="270,-1541.4 24,-1541.4 24,-1469.4 276,-1469.4 276,-1535.4 270,-1541.4"/>
+<polyline fill="none" stroke="black" points="270,-1541.4 270,-1535.4"/>
+<polyline fill="none" stroke="black" points="276,-1535.4 270,-1535.4"/>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-1509.6" font-family="Arial" font-size="14.00">Output:</text>
+<text xml:space="preserve" text-anchor="middle" x="150" y="-1492.8" font-family="Arial" font-size="14.00">Top Matches for LLM Analysis</text>
+</g>
+<!-- A1_Analyze&#45;&gt;A1_Output -->
+<g id="edge3" class="edge">
+<title>A1_Analyze-&gt;A1_Output</title>
+<path fill="none" stroke="black" d="M150,-1643.98C150,-1643.98 150,-1553.39 150,-1553.39"/>
+<polygon fill="black" stroke="black" points="153.5,-1553.39 150,-1543.39 146.5,-1553.39 153.5,-1553.39"/>
+</g>
+<!-- A1_Output&#45;&gt;A1_End -->
+<g id="edge7" class="edge">
+<title>A1_Output-&gt;A1_End</title>
+<path fill="none" stroke="black" d="M150,-1469.14C150,-1469.14 150,-1378.55 150,-1378.55"/>
+<polygon fill="black" stroke="black" points="153.5,-1378.55 150,-1368.55 146.5,-1378.55 153.5,-1378.55"/>
+</g>
+<!-- A2_Start -->
+<g id="node8" class="node">
+<title>A2_Start</title>
+<ellipse fill="#d4edda" stroke="black" cx="720" cy="-2445.6" rx="126" ry="126"/>
+<text xml:space="preserve" text-anchor="middle" x="720" y="-2441.4" font-family="Arial" font-size="14.00">Start</text>
+</g>
+<!-- A2_LoadData -->
+<g id="node11" class="node">
+<title>A2_LoadData</title>
+<path fill="#e6f7ff" stroke="black" d="M834,-2230C834,-2230 606,-2230 606,-2230 600,-2230 594,-2224 594,-2218 594,-2218 594,-2170 594,-2170 594,-2164 600,-2158 606,-2158 606,-2158 834,-2158 834,-2158 840,-2158 846,-2164 846,-2170 846,-2170 846,-2218 846,-2218 846,-2224 840,-2230 834,-2230"/>
+<text xml:space="preserve" text-anchor="middle" x="720" y="-2189.8" font-family="Arial" font-size="14.00">Load Policy, All Rules, &amp; Weights</text>
+</g>
+<!-- A2_Start&#45;&gt;A2_LoadData -->
+<g id="edge8" class="edge">
+<title>A2_Start-&gt;A2_LoadData</title>
+<path fill="none" stroke="black" d="M720,-2319.43C720,-2319.43 720,-2241.97 720,-2241.97"/>
+<polygon fill="black" stroke="black" points="723.5,-2241.97 720,-2231.97 716.5,-2241.97 723.5,-2241.97"/>
+</g>
+<!-- A2_End -->
+<g id="node9" class="node">
+<title>A2_End</title>
+<ellipse fill="#ced4da" stroke="black" cx="713" cy="-178.8" rx="126" ry="126"/>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-174.6" font-family="Arial" font-size="14.00">End</text>
+</g>
+<!-- A2_CandidatePool -->
+<g id="node10" class="node">
+<title>A2_CandidatePool</title>
+<path fill="#eaeaea" stroke="black" d="M839,-1270.05C839,-1273.67 782.52,-1276.6 713,-1276.6 643.48,-1276.6 587,-1273.67 587,-1270.05 587,-1270.05 587,-1211.15 587,-1211.15 587,-1207.53 643.48,-1204.6 713,-1204.6 782.52,-1204.6 839,-1207.53 839,-1211.15 839,-1211.15 839,-1270.05 839,-1270.05"/>
+<path fill="none" stroke="black" d="M839,-1270.05C839,-1266.44 782.52,-1263.51 713,-1263.51 643.48,-1263.51 587,-1266.44 587,-1270.05"/>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-1244.8" font-family="Arial" font-size="14.00">Candidate Pool</text>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-1228" font-family="Arial" font-size="14.00">(Initially Empty)</text>
+</g>
+<!-- A2_Analyze -->
+<g id="node16" class="node">
+<title>A2_Analyze</title>
+<path fill="#d1ecf1" stroke="black" d="M827,-1009.2C827,-1009.2 599,-1009.2 599,-1009.2 593,-1009.2 587,-1003.2 587,-997.2 587,-997.2 587,-949.2 587,-949.2 587,-943.2 593,-937.2 599,-937.2 599,-937.2 827,-937.2 827,-937.2 833,-937.2 839,-943.2 839,-949.2 839,-949.2 839,-997.2 839,-997.2 839,-1003.2 833,-1009.2 827,-1009.2"/>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-977.4" font-family="Arial" font-size="14.00">Find HIGHEST Score</text>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-960.6" font-family="Arial" font-size="14.00">in Candidate Pool</text>
+</g>
+<!-- A2_CandidatePool&#45;&gt;A2_Analyze -->
+<g id="edge17" class="edge">
+<title>A2_CandidatePool-&gt;A2_Analyze</title>
+<path fill="none" stroke="black" d="M713,-1204.26C713,-1204.26 713,-1020.98 713,-1020.98"/>
+<polygon fill="black" stroke="black" points="716.5,-1020.98 713,-1010.98 709.5,-1020.98 716.5,-1020.98"/>
+<text xml:space="preserve" text-anchor="middle" x="789.38" y="-1059" font-family="Times,serif" font-size="14.00">After all rules are filtered...</text>
+</g>
+<!-- A2_LoopStart -->
+<g id="node12" class="node">
+<title>A2_LoopStart</title>
+<path fill="lightgrey" stroke="none" d="M834,-2068.4C834,-2068.4 606,-2068.4 606,-2068.4 600,-2068.4 594,-2062.4 594,-2056.4 594,-2056.4 594,-2008.4 594,-2008.4 594,-2002.4 600,-1996.4 606,-1996.4 606,-1996.4 834,-1996.4 834,-1996.4 840,-1996.4 846,-2002.4 846,-2008.4 846,-2008.4 846,-2056.4 846,-2056.4 846,-2062.4 840,-2068.4 834,-2068.4"/>
+<text xml:space="preserve" text-anchor="middle" x="720" y="-2028.2" font-family="Arial" font-size="14.00">For Each Rule...</text>
+</g>
+<!-- A2_LoadData&#45;&gt;A2_LoopStart -->
+<!-- A2_Filter1 -->
+<g id="node13" class="node">
+<title>A2_Filter1</title>
+<polygon fill="#fff3cd" stroke="black" points="474,-1893.6 348,-1857.6 474,-1821.6 600,-1857.6 474,-1893.6"/>
+<text xml:space="preserve" text-anchor="middle" x="474" y="-1861.8" font-family="Arial" font-size="14.00">Filter 1:</text>
+<text xml:space="preserve" text-anchor="middle" x="474" y="-1845" font-family="Arial" font-size="14.00">Payor Match?</text>
+</g>
+<!-- A2_LoopStart&#45;&gt;A2_Filter1 -->
+<g id="edge10" class="edge">
+<title>A2_LoopStart-&gt;A2_Filter1</title>
+<path fill="none" stroke="black" d="M639,-1996.42C639,-1942.2 639,-1845.8 639,-1845.8 639,-1845.8 571.88,-1845.8 571.88,-1845.8"/>
+<polygon fill="black" stroke="black" points="571.88,-1842.3 561.88,-1845.8 571.88,-1849.3 571.88,-1842.3"/>
+</g>
+<!-- A2_Filter1&#45;&gt;A2_LoopStart -->
+<g id="edge12" class="edge">
+<title>A2_Filter1-&gt;A2_LoopStart</title>
+<path fill="none" stroke="red" stroke-dasharray="5,2" d="M559.04,-1869.8C615.01,-1869.8 678,-1869.8 678,-1869.8 678,-1869.8 678,-1985.2 678,-1985.2"/>
+<polygon fill="red" stroke="red" points="674.5,-1985.2 678,-1995.2 681.5,-1985.2 674.5,-1985.2"/>
+<text xml:space="preserve" text-anchor="middle" x="657.82" y="-1940.8" font-family="Times,serif" font-size="14.00"> No, Ignore </text>
+</g>
+<!-- A2_Filter2 -->
+<g id="node14" class="node">
+<title>A2_Filter2</title>
+<polygon fill="#fff3cd" stroke="black" points="630,-1716.2 504,-1680.2 630,-1644.2 756,-1680.2 630,-1716.2"/>
+<text xml:space="preserve" text-anchor="middle" x="630" y="-1684.4" font-family="Arial" font-size="14.00">Filter 2:</text>
+<text xml:space="preserve" text-anchor="middle" x="630" y="-1667.6" font-family="Arial" font-size="14.00">Code Set Match?</text>
+</g>
+<!-- A2_Filter1&#45;&gt;A2_Filter2 -->
+<g id="edge11" class="edge">
+<title>A2_Filter1-&gt;A2_Filter2</title>
+<path fill="none" stroke="black" d="M552,-1843.38C552,-1843.38 552,-1705.51 552,-1705.51"/>
+<polygon fill="black" stroke="black" points="555.5,-1705.51 552,-1695.51 548.5,-1705.51 555.5,-1705.51"/>
+<text xml:space="preserve" text-anchor="middle" x="566.39" y="-1766" font-family="Times,serif" font-size="14.00"> Yes </text>
+</g>
+<!-- A2_Filter2&#45;&gt;A2_LoopStart -->
+<g id="edge14" class="edge">
+<title>A2_Filter2-&gt;A2_LoopStart</title>
+<path fill="none" stroke="red" stroke-dasharray="5,2" d="M717,-1691.52C717,-1691.52 717,-1984.98 717,-1984.98"/>
+<polygon fill="red" stroke="red" points="713.5,-1984.98 717,-1994.98 720.5,-1984.98 713.5,-1984.98"/>
+<text xml:space="preserve" text-anchor="middle" x="777.82" y="-1853.4" font-family="Times,serif" font-size="14.00"> No, Ignore </text>
+</g>
+<!-- A2_Score -->
+<g id="node15" class="node">
+<title>A2_Score</title>
+<path fill="#e6f7ff" stroke="black" d="M827,-1541.4C827,-1541.4 599,-1541.4 599,-1541.4 593,-1541.4 587,-1535.4 587,-1529.4 587,-1529.4 587,-1481.4 587,-1481.4 587,-1475.4 593,-1469.4 599,-1469.4 599,-1469.4 827,-1469.4 827,-1469.4 833,-1469.4 839,-1475.4 839,-1481.4 839,-1481.4 839,-1529.4 839,-1529.4 839,-1535.4 833,-1541.4 827,-1541.4"/>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-1509.6" font-family="Arial" font-size="14.00">Score &amp; Add to</text>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-1492.8" font-family="Arial" font-size="14.00">Candidate Pool</text>
+</g>
+<!-- A2_Filter2&#45;&gt;A2_Score -->
+<g id="edge13" class="edge">
+<title>A2_Filter2-&gt;A2_Score</title>
+<path fill="none" stroke="black" d="M671.5,-1655.89C671.5,-1655.89 671.5,-1553.16 671.5,-1553.16"/>
+<polygon fill="black" stroke="black" points="675,-1553.16 671.5,-1543.16 668,-1553.16 675,-1553.16"/>
+<text xml:space="preserve" text-anchor="middle" x="672.39" y="-1588.6" font-family="Times,serif" font-size="14.00"> Yes </text>
+</g>
+<!-- A2_Score&#45;&gt;A2_CandidatePool -->
+<!-- A2_Score&#45;&gt;A2_LoopStart -->
+<g id="edge15" class="edge">
+<title>A2_Score-&gt;A2_LoopStart</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M797.5,-1541.62C797.5,-1541.62 797.5,-1985.11 797.5,-1985.11"/>
+<polygon fill="black" stroke="black" points="794,-1985.11 797.5,-1995.11 801,-1985.11 794,-1985.11"/>
+<text xml:space="preserve" text-anchor="middle" x="857.58" y="-1766" font-family="Times,serif" font-size="14.00">Next Rule</text>
+</g>
+<!-- A2_Decision -->
+<g id="node17" class="node">
+<title>A2_Decision</title>
+<polygon fill="#fff3cd" stroke="black" points="713,-834.4 587,-798.4 713,-762.4 839,-798.4 713,-834.4"/>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-794.2" font-family="Arial" font-size="14.00">Score &gt; Threshold?</text>
+</g>
+<!-- A2_Analyze&#45;&gt;A2_Decision -->
+<g id="edge18" class="edge">
+<title>A2_Analyze-&gt;A2_Decision</title>
+<path fill="none" stroke="black" d="M713,-936.98C713,-936.98 713,-846.39 713,-846.39"/>
+<polygon fill="black" stroke="black" points="716.5,-846.39 713,-836.39 709.5,-846.39 716.5,-846.39"/>
+</g>
+<!-- A2_Output -->
+<g id="node18" class="node">
+<title>A2_Output</title>
+<polygon fill="#fefee3" stroke="black" points="833,-569.6 587,-569.6 587,-497.6 839,-497.6 839,-563.6 833,-569.6"/>
+<polyline fill="none" stroke="black" points="833,-569.6 833,-563.6"/>
+<polyline fill="none" stroke="black" points="839,-563.6 833,-563.6"/>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-537.8" font-family="Arial" font-size="14.00">Output:</text>
+<text xml:space="preserve" text-anchor="middle" x="713" y="-521" font-family="Arial" font-size="14.00">Classification: 'NEW' or 'UPDATE'</text>
+</g>
+<!-- A2_Decision&#45;&gt;A2_Output -->
+<g id="edge19" class="edge">
+<title>A2_Decision-&gt;A2_Output</title>
+<path fill="none" stroke="black" d="M713,-762.14C713,-762.14 713,-581.36 713,-581.36"/>
+<polygon fill="black" stroke="black" points="716.5,-581.36 713,-571.36 709.5,-581.36 716.5,-581.36"/>
+<text xml:space="preserve" text-anchor="middle" x="741.39" y="-706.8" font-family="Times,serif" font-size="14.00"> Yes / No </text>
+</g>
+<!-- A2_Output&#45;&gt;A2_End -->
+<g id="edge20" class="edge">
+<title>A2_Output-&gt;A2_End</title>
+<path fill="none" stroke="black" d="M713,-497.3C713,-497.3 713,-316.45 713,-316.45"/>
+<polygon fill="black" stroke="black" points="716.5,-316.45 713,-306.45 709.5,-316.45 716.5,-316.45"/>
+</g>
+<!-- A3_Start -->
+<g id="node19" class="node">
+<title>A3_Start</title>
+<ellipse fill="#d4edda" stroke="black" cx="1162" cy="-2445.6" rx="126" ry="126"/>
+<text xml:space="preserve" text-anchor="middle" x="1162" y="-2441.4" font-family="Arial" font-size="14.00">Start</text>
+</g>
+<!-- A3_LoadData -->
+<g id="node22" class="node">
+<title>A3_LoadData</title>
+<path fill="#e6f7ff" stroke="black" d="M1276,-2230C1276,-2230 1048,-2230 1048,-2230 1042,-2230 1036,-2224 1036,-2218 1036,-2218 1036,-2170 1036,-2170 1036,-2164 1042,-2158 1048,-2158 1048,-2158 1276,-2158 1276,-2158 1282,-2158 1288,-2164 1288,-2170 1288,-2170 1288,-2218 1288,-2218 1288,-2224 1282,-2230 1276,-2230"/>
+<text xml:space="preserve" text-anchor="middle" x="1162" y="-2189.8" font-family="Arial" font-size="14.00">Load Policy, All Rules, &amp; Weights</text>
+</g>
+<!-- A3_Start&#45;&gt;A3_LoadData -->
+<g id="edge21" class="edge">
+<title>A3_Start-&gt;A3_LoadData</title>
+<path fill="none" stroke="black" d="M1162,-2319.43C1162,-2319.43 1162,-2241.97 1162,-2241.97"/>
+<polygon fill="black" stroke="black" points="1165.5,-2241.97 1162,-2231.97 1158.5,-2241.97 1165.5,-2241.97"/>
+</g>
+<!-- A3_End -->
+<g id="node20" class="node">
+<title>A3_End</title>
+<ellipse fill="#ced4da" stroke="black" cx="1168" cy="-533.6" rx="126" ry="126"/>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-529.4" font-family="Arial" font-size="14.00">End</text>
+</g>
+<!-- A3_CandidatePool -->
+<g id="node21" class="node">
+<title>A3_CandidatePool</title>
+<path fill="#eaeaea" stroke="black" d="M1294,-1534.85C1294,-1538.47 1237.52,-1541.4 1168,-1541.4 1098.48,-1541.4 1042,-1538.47 1042,-1534.85 1042,-1534.85 1042,-1475.95 1042,-1475.95 1042,-1472.33 1098.48,-1469.4 1168,-1469.4 1237.52,-1469.4 1294,-1472.33 1294,-1475.95 1294,-1475.95 1294,-1534.85 1294,-1534.85"/>
+<path fill="none" stroke="black" d="M1294,-1534.85C1294,-1531.24 1237.52,-1528.31 1168,-1528.31 1098.48,-1528.31 1042,-1531.24 1042,-1534.85"/>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-1509.6" font-family="Arial" font-size="14.00">Candidate Pool</text>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-1492.8" font-family="Arial" font-size="14.00">(Initially Empty)</text>
+</g>
+<!-- A3_Analyze -->
+<g id="node26" class="node">
+<title>A3_Analyze</title>
+<path fill="#d1ecf1" stroke="black" d="M1282,-1276.6C1282,-1276.6 1054,-1276.6 1054,-1276.6 1048,-1276.6 1042,-1270.6 1042,-1264.6 1042,-1264.6 1042,-1216.6 1042,-1216.6 1042,-1210.6 1048,-1204.6 1054,-1204.6 1054,-1204.6 1282,-1204.6 1282,-1204.6 1288,-1204.6 1294,-1210.6 1294,-1216.6 1294,-1216.6 1294,-1264.6 1294,-1264.6 1294,-1270.6 1288,-1276.6 1282,-1276.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-1244.8" font-family="Arial" font-size="14.00">Find HIGHEST Score</text>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-1228" font-family="Arial" font-size="14.00">in Candidate Pool</text>
+</g>
+<!-- A3_CandidatePool&#45;&gt;A3_Analyze -->
+<g id="edge28" class="edge">
+<title>A3_CandidatePool-&gt;A3_Analyze</title>
+<path fill="none" stroke="black" d="M1168,-1469.14C1168,-1469.14 1168,-1288.36 1168,-1288.36"/>
+<polygon fill="black" stroke="black" points="1171.5,-1288.36 1168,-1278.36 1164.5,-1288.36 1171.5,-1288.36"/>
+<text xml:space="preserve" text-anchor="middle" x="1244.38" y="-1413.8" font-family="Times,serif" font-size="14.00">After all rules are filtered...</text>
+</g>
+<!-- A3_LoopStart -->
+<g id="node23" class="node">
+<title>A3_LoopStart</title>
+<path fill="lightgrey" stroke="none" d="M1276,-2068.4C1276,-2068.4 1048,-2068.4 1048,-2068.4 1042,-2068.4 1036,-2062.4 1036,-2056.4 1036,-2056.4 1036,-2008.4 1036,-2008.4 1036,-2002.4 1042,-1996.4 1048,-1996.4 1048,-1996.4 1276,-1996.4 1276,-1996.4 1282,-1996.4 1288,-2002.4 1288,-2008.4 1288,-2008.4 1288,-2056.4 1288,-2056.4 1288,-2062.4 1282,-2068.4 1276,-2068.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1162" y="-2028.2" font-family="Arial" font-size="14.00">For Each Rule...</text>
+</g>
+<!-- A3_LoadData&#45;&gt;A3_LoopStart -->
+<!-- A3_Filter -->
+<g id="node24" class="node">
+<title>A3_Filter</title>
+<polygon fill="#fff3cd" stroke="black" points="1084,-1893.6 957.76,-1857.6 1084,-1821.6 1210.24,-1857.6 1084,-1893.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1084" y="-1853.4" font-family="Arial" font-size="14.00">'must-match' filter Pass?</text>
+</g>
+<!-- A3_LoopStart&#45;&gt;A3_Filter -->
+<g id="edge23" class="edge">
+<title>A3_LoopStart-&gt;A3_Filter</title>
+<path fill="none" stroke="black" d="M1152.16,-1996.6C1152.16,-1996.6 1152.16,-1885.82 1152.16,-1885.82"/>
+<polygon fill="black" stroke="black" points="1155.66,-1885.82 1152.16,-1875.82 1148.66,-1885.82 1155.66,-1885.82"/>
+</g>
+<!-- A3_Filter&#45;&gt;A3_LoopStart -->
+<g id="edge25" class="edge">
+<title>A3_Filter-&gt;A3_LoopStart</title>
+<path fill="none" stroke="red" stroke-dasharray="5,2" d="M1094.08,-1890.89C1094.08,-1890.89 1094.08,-1985.01 1094.08,-1985.01"/>
+<polygon fill="red" stroke="red" points="1090.58,-1985.01 1094.08,-1995.01 1097.58,-1985.01 1090.58,-1985.01"/>
+<text xml:space="preserve" text-anchor="middle" x="1195.82" y="-1940.8" font-family="Times,serif" font-size="14.00"> No, Ignore </text>
+</g>
+<!-- A3_Score -->
+<g id="node25" class="node">
+<title>A3_Score</title>
+<path fill="#e6f7ff" stroke="black" d="M1282,-1716.2C1282,-1716.2 1054,-1716.2 1054,-1716.2 1048,-1716.2 1042,-1710.2 1042,-1704.2 1042,-1704.2 1042,-1656.2 1042,-1656.2 1042,-1650.2 1048,-1644.2 1054,-1644.2 1054,-1644.2 1282,-1644.2 1282,-1644.2 1288,-1644.2 1294,-1650.2 1294,-1656.2 1294,-1656.2 1294,-1704.2 1294,-1704.2 1294,-1710.2 1288,-1716.2 1282,-1716.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-1684.4" font-family="Arial" font-size="14.00">Score &amp; Add to</text>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-1667.6" font-family="Arial" font-size="14.00">Candidate Pool</text>
+</g>
+<!-- A3_Filter&#45;&gt;A3_Score -->
+<g id="edge24" class="edge">
+<title>A3_Filter-&gt;A3_Score</title>
+<path fill="none" stroke="black" d="M1126.12,-1833.31C1126.12,-1833.31 1126.12,-1728 1126.12,-1728"/>
+<polygon fill="black" stroke="black" points="1129.62,-1728 1126.12,-1718 1122.62,-1728 1129.62,-1728"/>
+<text xml:space="preserve" text-anchor="middle" x="1140.39" y="-1766" font-family="Times,serif" font-size="14.00"> Yes </text>
+</g>
+<!-- A3_Score&#45;&gt;A3_CandidatePool -->
+<!-- A3_Score&#45;&gt;A3_LoopStart -->
+<g id="edge26" class="edge">
+<title>A3_Score-&gt;A3_LoopStart</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1249.12,-1716.57C1249.12,-1716.57 1249.12,-1984.98 1249.12,-1984.98"/>
+<polygon fill="black" stroke="black" points="1245.62,-1984.98 1249.12,-1994.98 1252.62,-1984.98 1245.62,-1984.98"/>
+<text xml:space="preserve" text-anchor="middle" x="1382.58" y="-1853.4" font-family="Times,serif" font-size="14.00">Next Rule</text>
+</g>
+<!-- A3_Decision -->
+<g id="node27" class="node">
+<title>A3_Decision</title>
+<polygon fill="#fff3cd" stroke="black" points="1168,-1009.2 1042,-973.2 1168,-937.2 1294,-973.2 1168,-1009.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-969" font-family="Arial" font-size="14.00">Score &gt; Threshold?</text>
+</g>
+<!-- A3_Analyze&#45;&gt;A3_Decision -->
+<g id="edge29" class="edge">
+<title>A3_Analyze-&gt;A3_Decision</title>
+<path fill="none" stroke="black" d="M1168,-1204.26C1168,-1204.26 1168,-1020.98 1168,-1020.98"/>
+<polygon fill="black" stroke="black" points="1171.5,-1020.98 1168,-1010.98 1164.5,-1020.98 1171.5,-1020.98"/>
+</g>
+<!-- A3_Output -->
+<g id="node28" class="node">
+<title>A3_Output</title>
+<polygon fill="#fefee3" stroke="black" points="1288,-834.4 1042,-834.4 1042,-762.4 1294,-762.4 1294,-828.4 1288,-834.4"/>
+<polyline fill="none" stroke="black" points="1288,-834.4 1288,-828.4"/>
+<polyline fill="none" stroke="black" points="1294,-828.4 1288,-828.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-811" font-family="Arial" font-size="14.00">Output:</text>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-794.2" font-family="Arial" font-size="14.00">- Classification</text>
+<text xml:space="preserve" text-anchor="middle" x="1168" y="-777.4" font-family="Arial" font-size="14.00">- Top N Matches</text>
+</g>
+<!-- A3_Decision&#45;&gt;A3_Output -->
+<g id="edge30" class="edge">
+<title>A3_Decision-&gt;A3_Output</title>
+<path fill="none" stroke="black" d="M1168,-936.98C1168,-936.98 1168,-846.39 1168,-846.39"/>
+<polygon fill="black" stroke="black" points="1171.5,-846.39 1168,-836.39 1164.5,-846.39 1171.5,-846.39"/>
+<text xml:space="preserve" text-anchor="middle" x="1196.39" y="-881.6" font-family="Times,serif" font-size="14.00"> Yes / No </text>
+</g>
+<!-- A3_Output&#45;&gt;A3_End -->
+<g id="edge31" class="edge">
+<title>A3_Output-&gt;A3_End</title>
+<path fill="none" stroke="black" d="M1168,-762.14C1168,-762.14 1168,-671.55 1168,-671.55"/>
+<polygon fill="black" stroke="black" points="1171.5,-671.55 1168,-661.55 1164.5,-671.55 1171.5,-671.55"/>
+</g>
+<!-- A4_Start -->
+<g id="node29" class="node">
+<title>A4_Start</title>
+<ellipse fill="#d4edda" stroke="black" cx="1716" cy="-2445.6" rx="126" ry="126"/>
+<text xml:space="preserve" text-anchor="middle" x="1716" y="-2441.4" font-family="Arial" font-size="14.00">Start</text>
+</g>
+<!-- A4_LoadData -->
+<g id="node31" class="node">
+<title>A4_LoadData</title>
+<path fill="#e6f7ff" stroke="black" d="M1830,-2230C1830,-2230 1602,-2230 1602,-2230 1596,-2230 1590,-2224 1590,-2218 1590,-2218 1590,-2170 1590,-2170 1590,-2164 1596,-2158 1602,-2158 1602,-2158 1830,-2158 1830,-2158 1836,-2158 1842,-2164 1842,-2170 1842,-2170 1842,-2218 1842,-2218 1842,-2224 1836,-2230 1830,-2230"/>
+<text xml:space="preserve" text-anchor="middle" x="1716" y="-2189.8" font-family="Arial" font-size="14.00">Load Policy &amp; All Rules</text>
+</g>
+<!-- A4_Start&#45;&gt;A4_LoadData -->
+<g id="edge35" class="edge">
+<title>A4_Start-&gt;A4_LoadData</title>
+<path fill="none" stroke="black" d="M1716,-2319.43C1716,-2319.43 1716,-2241.97 1716,-2241.97"/>
+<polygon fill="black" stroke="black" points="1719.5,-2241.97 1716,-2231.97 1712.5,-2241.97 1719.5,-2241.97"/>
+</g>
+<!-- A4_End -->
+<g id="node30" class="node">
+<title>A4_End</title>
+<ellipse fill="#ced4da" stroke="black" cx="1779" cy="-178.8" rx="126" ry="126"/>
+<text xml:space="preserve" text-anchor="middle" x="1779" y="-174.6" font-family="Arial" font-size="14.00">End</text>
+</g>
+<!-- A4_LoopStart -->
+<g id="node32" class="node">
+<title>A4_LoopStart</title>
+<path fill="lightgrey" stroke="none" d="M1830,-2068.4C1830,-2068.4 1602,-2068.4 1602,-2068.4 1596,-2068.4 1590,-2062.4 1590,-2056.4 1590,-2056.4 1590,-2008.4 1590,-2008.4 1590,-2002.4 1596,-1996.4 1602,-1996.4 1602,-1996.4 1830,-1996.4 1830,-1996.4 1836,-1996.4 1842,-2002.4 1842,-2008.4 1842,-2008.4 1842,-2056.4 1842,-2056.4 1842,-2062.4 1836,-2068.4 1830,-2068.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1716" y="-2028.2" font-family="Arial" font-size="14.00">For Each Rule...</text>
+</g>
+<!-- A4_LoadData&#45;&gt;A4_LoopStart -->
+<!-- A4_CountKeys -->
+<g id="node33" class="node">
+<title>A4_CountKeys</title>
+<path fill="#e6f7ff" stroke="black" d="M1830,-1893.6C1830,-1893.6 1602,-1893.6 1602,-1893.6 1596,-1893.6 1590,-1887.6 1590,-1881.6 1590,-1881.6 1590,-1833.6 1590,-1833.6 1590,-1827.6 1596,-1821.6 1602,-1821.6 1602,-1821.6 1830,-1821.6 1830,-1821.6 1836,-1821.6 1842,-1827.6 1842,-1833.6 1842,-1833.6 1842,-1881.6 1842,-1881.6 1842,-1887.6 1836,-1893.6 1830,-1893.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1716" y="-1861.8" font-family="Arial" font-size="14.00">1. Count Attribute</text>
+<text xml:space="preserve" text-anchor="middle" x="1716" y="-1845" font-family="Arial" font-size="14.00">Overlaps (Keys)</text>
+</g>
+<!-- A4_LoopStart&#45;&gt;A4_CountKeys -->
+<g id="edge32" class="edge">
+<title>A4_LoopStart-&gt;A4_CountKeys</title>
+<path fill="none" stroke="black" d="M1716,-1996.6C1716,-1996.6 1716,-1905.46 1716,-1905.46"/>
+<polygon fill="black" stroke="black" points="1719.5,-1905.46 1716,-1895.46 1712.5,-1905.46 1719.5,-1905.46"/>
+</g>
+<!-- A4_CountValues -->
+<g id="node34" class="node">
+<title>A4_CountValues</title>
+<path fill="#e6f7ff" stroke="black" d="M1830,-1716.2C1830,-1716.2 1602,-1716.2 1602,-1716.2 1596,-1716.2 1590,-1710.2 1590,-1704.2 1590,-1704.2 1590,-1656.2 1590,-1656.2 1590,-1650.2 1596,-1644.2 1602,-1644.2 1602,-1644.2 1830,-1644.2 1830,-1644.2 1836,-1644.2 1842,-1650.2 1842,-1656.2 1842,-1656.2 1842,-1704.2 1842,-1704.2 1842,-1710.2 1836,-1716.2 1830,-1716.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1716" y="-1676" font-family="Arial" font-size="14.00">2. Count Value Matches</text>
+</g>
+<!-- A4_CountKeys&#45;&gt;A4_CountValues -->
+<g id="edge33" class="edge">
+<title>A4_CountKeys-&gt;A4_CountValues</title>
+<path fill="none" stroke="black" d="M1716,-1821.27C1716,-1821.27 1716,-1727.99 1716,-1727.99"/>
+<polygon fill="black" stroke="black" points="1719.5,-1727.99 1716,-1717.99 1712.5,-1727.99 1719.5,-1727.99"/>
+</g>
+<!-- A4_CalcScore -->
+<g id="node35" class="node">
+<title>A4_CalcScore</title>
+<path fill="#e6f7ff" stroke="black" d="M1830,-1541.4C1830,-1541.4 1602,-1541.4 1602,-1541.4 1596,-1541.4 1590,-1535.4 1590,-1529.4 1590,-1529.4 1590,-1481.4 1590,-1481.4 1590,-1475.4 1596,-1469.4 1602,-1469.4 1602,-1469.4 1830,-1469.4 1830,-1469.4 1836,-1469.4 1842,-1475.4 1842,-1481.4 1842,-1481.4 1842,-1529.4 1842,-1529.4 1842,-1535.4 1836,-1541.4 1830,-1541.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1716" y="-1501.2" font-family="Arial" font-size="14.00">3. Calculate Final Score</text>
+</g>
+<!-- A4_CountValues&#45;&gt;A4_CalcScore -->
+<g id="edge34" class="edge">
+<title>A4_CountValues-&gt;A4_CalcScore</title>
+<path fill="none" stroke="black" d="M1716,-1643.98C1716,-1643.98 1716,-1553.39 1716,-1553.39"/>
+<polygon fill="black" stroke="black" points="1719.5,-1553.39 1716,-1543.39 1712.5,-1553.39 1719.5,-1553.39"/>
+</g>
+<!-- A4_Decision -->
+<g id="node36" class="node">
+<title>A4_Decision</title>
+<polygon fill="#fff3cd" stroke="black" points="1703,-1276.6 1577,-1240.6 1703,-1204.6 1829,-1240.6 1703,-1276.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1703" y="-1236.4" font-family="Arial" font-size="14.00">Score &gt; 80%?</text>
+</g>
+<!-- A4_CalcScore&#45;&gt;A4_Decision -->
+<g id="edge37" class="edge">
+<title>A4_CalcScore-&gt;A4_Decision</title>
+<path fill="none" stroke="black" d="M1709.5,-1469.14C1709.5,-1469.14 1709.5,-1286.68 1709.5,-1286.68"/>
+<polygon fill="black" stroke="black" points="1713,-1286.68 1709.5,-1276.68 1706,-1286.68 1713,-1286.68"/>
+<text xml:space="preserve" text-anchor="middle" x="1776.66" y="-1413.8" font-family="Times,serif" font-size="14.00">After each rule is scored...</text>
+</g>
+<!-- A4_Validate -->
+<g id="node37" class="node">
+<title>A4_Validate</title>
+<polygon fill="#fff3cd" stroke="black" points="1577,-1009.2 1451,-973.2 1577,-937.2 1703,-973.2 1577,-1009.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1577" y="-969" font-family="Arial" font-size="14.00">Is Payor a Match?</text>
+</g>
+<!-- A4_Decision&#45;&gt;A4_Validate -->
+<g id="edge38" class="edge">
+<title>A4_Decision-&gt;A4_Validate</title>
+<path fill="none" stroke="black" d="M1640,-1222.22C1640,-1222.22 1640,-1003.22 1640,-1003.22"/>
+<polygon fill="black" stroke="black" points="1643.5,-1003.22 1640,-993.22 1636.5,-1003.22 1643.5,-1003.22"/>
+<text xml:space="preserve" text-anchor="middle" x="1681.01" y="-1059" font-family="Times,serif" font-size="14.00"> Yes (Update) </text>
+</g>
+<!-- A4_LLM -->
+<g id="node38" class="node">
+<title>A4_LLM</title>
+<path fill="#d1ecf1" stroke="black" d="M1849,-834.4C1849,-834.4 1621,-834.4 1621,-834.4 1615,-834.4 1609,-828.4 1609,-822.4 1609,-822.4 1609,-774.4 1609,-774.4 1609,-768.4 1615,-762.4 1621,-762.4 1621,-762.4 1849,-762.4 1849,-762.4 1855,-762.4 1861,-768.4 1861,-774.4 1861,-774.4 1861,-822.4 1861,-822.4 1861,-828.4 1855,-834.4 1849,-834.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1735" y="-802.6" font-family="Arial" font-size="14.00">LLM Call: Validate Decision</text>
+<text xml:space="preserve" text-anchor="middle" x="1735" y="-785.8" font-family="Arial" font-size="14.00">&amp; Generate Rule Spec</text>
+</g>
+<!-- A4_Decision&#45;&gt;A4_LLM -->
+<g id="edge39" class="edge">
+<title>A4_Decision-&gt;A4_LLM</title>
+<path fill="none" stroke="black" d="M1766,-1222.16C1766,-1222.16 1766,-846.35 1766,-846.35"/>
+<polygon fill="black" stroke="black" points="1769.5,-846.35 1766,-836.35 1762.5,-846.35 1769.5,-846.35"/>
+<text xml:space="preserve" text-anchor="middle" x="1878.68" y="-969" font-family="Times,serif" font-size="14.00"> No (New) </text>
+</g>
+<!-- A4_Validate&#45;&gt;A4_LLM -->
+<g id="edge40" class="edge">
+<title>A4_Validate-&gt;A4_LLM</title>
+<path fill="none" stroke="black" d="M1671.67,-963.8C1671.67,-963.8 1671.67,-846.3 1671.67,-846.3"/>
+<polygon fill="black" stroke="black" points="1675.17,-846.3 1671.67,-836.3 1668.17,-846.3 1675.17,-846.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1601.39" y="-881.6" font-family="Times,serif" font-size="14.00"> Yes </text>
+</g>
+<!-- A4_Validate&#45;&gt;A4_LLM -->
+<g id="edge41" class="edge">
+<title>A4_Validate-&gt;A4_LLM</title>
+<path fill="none" stroke="red" d="M1640.33,-954.82C1640.33,-954.82 1640.33,-846.21 1640.33,-846.21"/>
+<polygon fill="red" stroke="red" points="1643.83,-846.21 1640.33,-836.21 1636.83,-846.21 1643.83,-846.21"/>
+<text xml:space="preserve" text-anchor="middle" x="1771.78" y="-881.6" font-family="Times,serif" font-size="14.00"> No (Treat as New) </text>
+</g>
+<!-- A4_Output -->
+<g id="node39" class="node">
+<title>A4_Output</title>
+<polygon fill="#fefee3" stroke="black" points="1899,-569.6 1653,-569.6 1653,-497.6 1905,-497.6 1905,-563.6 1899,-569.6"/>
+<polyline fill="none" stroke="black" points="1899,-569.6 1899,-563.6"/>
+<polyline fill="none" stroke="black" points="1905,-563.6 1899,-563.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1779" y="-537.8" font-family="Arial" font-size="14.00">Output:</text>
+<text xml:space="preserve" text-anchor="middle" x="1779" y="-521" font-family="Arial" font-size="14.00">Validated Classification &amp; Spec</text>
+</g>
+<!-- A4_LLM&#45;&gt;A4_Output -->
+<g id="edge42" class="edge">
+<title>A4_LLM-&gt;A4_Output</title>
+<path fill="none" stroke="black" d="M1757,-762.14C1757,-762.14 1757,-581.36 1757,-581.36"/>
+<polygon fill="black" stroke="black" points="1760.5,-581.36 1757,-571.36 1753.5,-581.36 1760.5,-581.36"/>
+</g>
+<!-- A4_Output&#45;&gt;A4_End -->
+<g id="edge44" class="edge">
+<title>A4_Output-&gt;A4_End</title>
+<path fill="none" stroke="black" d="M1779,-497.3C1779,-497.3 1779,-316.45 1779,-316.45"/>
+<polygon fill="black" stroke="black" points="1782.5,-316.45 1779,-306.45 1775.5,-316.45 1782.5,-316.45"/>
+<text xml:space="preserve" text-anchor="middle" x="1862.77" y="-352" font-family="Times,serif" font-size="14.00">After all rules are processed...</text>
+</g>
+<!-- A4_Output&#45;&gt;A4_LoopStart -->
+<g id="edge43" class="edge">
+<title>A4_Output-&gt;A4_LoopStart</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1883,-569.92C1883,-798.87 1883,-2032.8 1883,-2032.8 1883,-2032.8 1853.23,-2032.8 1853.23,-2032.8"/>
+<polygon fill="black" stroke="black" points="1853.23,-2029.3 1843.23,-2032.8 1853.23,-2036.3 1853.23,-2029.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1955.58" y="-1413.8" font-family="Times,serif" font-size="14.00">Next Rule</text>
+</g>
+</g>
+</svg>
