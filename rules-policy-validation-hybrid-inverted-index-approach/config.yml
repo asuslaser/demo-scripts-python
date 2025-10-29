@@ -1,0 +1,23 @@
+# config.yml
+# ---
+# Main configuration for the policy comparison script
+
+# File paths for input data and output results
+paths:
+  rules_csv: 'rules.csv'
+  policy_json: 'policy.json'
+  weights_file: 'weights.yml'
+  output_json: 'analysis_results.json'
+
+# Thresholds and settings
+thresholds:
+  # The number of top candidates to select from the inverted index for detailed scoring.
+  # A smaller number is faster; a larger number is more thorough.
+  top_n_candidates: 10
+
+  jaccard_similarity: 0.5
+  cosine_similarity: 0.7
+
+# Settings for the AI model used to generate text embeddings
+models:
+  embedding_model: 'sentence-transformers/all-MiniLM-L6-v2'

@@ -1,0 +1,239 @@
+{
+    "rule": {
+        "ruleMetaData": {
+            "id": null,
+            "type": "Reimbursement Policy",
+            "requestType": null,
+            "requesterCategory": null,
+            "transferredBy": null,
+            "serviceDate": null,
+            "claimAmount": null,
+            "referralAuthorization": {
+                "authorizationNumber": null
+            },
+            "billingGroup": {
+                "claimType": null,
+                "healthCareClaimType": null
+            },
+            "ruleCriteria": {
+                "action": null,
+                "businessReason": {
+                    "impact": "Claims without valid two-digit ambulance modifiers will be denied.",
+                    "explanation": "UnitedHealthcare reimbursement policies align with CMS guidelines and require accurate coding and modifier usage to ensure proper reimbursement. The policy is subject to change and updates are published accordingly."
+                },
+                "applyToAllUsersForService": null,
+                "nextClaimStatus": null,
+                "allowManualOverride": null,
+                "documentDate": null,
+                "keyInformation": "Reimbursement applies only to Ambulance Suppliers reporting 0000 codes A0021 and A0225 - A0999. Non-Ambulance Suppliers will not be reimbursed for ambulance services. Ambulance transportation claims require a valid two-digit origin and destination modifier; claims without valid modifiers will be denied. The letter 'A' is an intermediate stop modifier used in the second position. If in the first position, the claim will be denied. Services such as surgery, surgery, aftercare, outpatient, etc. and might differential are bundled into the ambulance transportation payment and not reimbursed separately. Ambulance services to and from facilities overlapping inpatient stays (excluding admission and discharge dates) will not be reimbursed separately. Advanced Life Support, Level 2 (ALS2) requires at least three separate administrations of medications by IV push/bolus or continuous infusion (excluding crystalloid fluids) or at least one ALS2 procedure. Reimbursement is based on the level of service provided, not the vehicle used."
+            },
+            "generalFactor": null
+        },
+        "clientInformation": {
+            "legalName": null,
+            "id": null
+        },
+        "notesAndDescription": null,
+        "precoment": null,
+        "version": null,
+        "parties": {
+            "athehealth": null,
+            "client": null
+        },
+        "agreements": null,
+        "practice": {
+            "id": null,
+            "name": null
+        },
+        "categories": null,
+        "documentation": {
+            "caseNumber": null,
+            "caseSubject": "Claims must include accurate 0000 ambulance transportation codes with valid two-digit origin and destination modifiers. Documentation should support the level of service provided, including ALS assessments and interventions when applicable. Ambulance services overlapping inpatient stays (excluding admission and discharge dates) should be documented accordingly to avoid separate reimbursement."
+        },
+        "rulesCopy": null,
+        "rulesNotCopy": null,
+        "customRules": null,
+        "additionalRequests": null,
+        "summary": "This policy addresses reimbursement related to services included as part of an ambulance transportation service, ambulance modifier usage, provider specialty reporting, ambulance services and the requirements for reporting Advanced Life Support, Level 2 (ALS2) ambulance transportation.",
+        "rulesDelete": null,
+        "rulesRequests": null,
+        "telehealthInstantSiteFlag": null,
+        "telehealthSubmissionFlag": null,
+        "primaryClaimOutstandingAmount": null,
+        "rules": {
+            "id": null,
+            "type": "Reimbursement Policy"
+        }
+    },
+    "claimAmount": null,
+    "claimInformation": null,
+    "patient": {
+        "age": null,
+        "relationshipToInsuredId": null,
+        "insurance": {
+            "primaryInsurance": null,
+            "primaryInsuranceClaimFilingIndicator": null
+        },
+        "medicalGroup": {
+            "id": null,
+            "name": null,
+            "npiStatusId": null,
+            "groupNumber": {
+                "npi": null,
+                "mediaGroupTaxonomy": null
+            },
+            "enrollmentStatus": {
+                "legacyNumber": null,
+                "credentialingStatus": null
+            },
+            "providerGroup": {
+                "department": {
+                    "id": null,
+                    "name": null,
+                    "facility": null,
+                    "governmentDesignation": {
+                        "name": null,
+                        "designationGroups": null
+                    },
+                    "placeOfService": {
+                        "name": null,
+                        "id": null
+                    }
+                }
+            }
+        }
+    },
+    "insuranceConfig": {
+        "outputLabel": null,
+        "insuranceDetails": null,
+        "insurancePackage": {
+            "id": null,
+            "name": null,
+            "adjudicationProgram": null,
+            "governmentFundedType": null,
+            "enrollmentCategory": null,
+            "claimSubmissionCategory": {
+                "name": null,
+                "billingTypeId": null
+            },
+            "insuranceReportingCategory": null,
+            "secondaryInsuranceReportingCategory": null,
+            "encReceiverId": null,
+            "adjudicationProgramId": null,
+            "allowableCategoryId": null,
+            "claimRuleCategory": null
+        },
+        "settings": {
+            "credentialed": {
+                "asc": null,
+                "fgbc": null,
+                "pbc": null,
+                "rhc": null,
+                "xhc": null,
+                "uc": null
+            },
+            "serviceType": {
+                "fgbc": null,
+                "pbc": null,
+                "rhc": null,
+                "xhc": null,
+                "uc": null,
+                "asc": null
+            }
+        },
+        "insuranceGroups": {
+            "fabc": null,
+            "pbc": null,
+            "rhc": null,
+            "xhc": null,
+            "uc": null,
+            "asc": null
+        },
+        "autoFormatting": {
+            "fabc": null,
+            "pbc": null,
+            "rhp": null,
+            "xhc": null,
+            "uc": null,
+            "asc": null
+        },
+        "conditionRelatedToEmployment": null,
+        "conditionRelatedToAutoAccident": null,
+        "conditionRelatedToOtherAccident": null,
+        "claimFillingIndicator": null,
+        "medicareReplacementFlag": null,
+        "productTypeId": null,
+        "routingProgramId": null,
+        "routingEntityId": null
+    },
+    "charges": {
+        "label": null,
+        "target": null,
+        "codesAndChargeSettings": null,
+        "procedureCodes": [
+            "A0021",
+            "A0225",
+            "A0380",
+            "A0382",
+            "A0384",
+            "A0390",
+            "A0394",
+            "A0396",
+            "A0398",
+            "A0420",
+            "A0422",
+            "A0424",
+            "A0425",
+            "A0426",
+            "A0427",
+            "A0428",
+            "A0429",
+            "A0430",
+            "A0431",
+            "A0432",
+            "A0433",
+            "A0434",
+            "A0435",
+            "A0436",
+            "A0888",
+            "A0998",
+            "A0999"
+        ],
+        "revenueCode": null,
+        "modifiers": null,
+        "visibilities": null,
+        "chargeOutputLabel": null,
+        "placeOfServiceFromCharge": null,
+        "chargeTelehealthStatus": null,
+        "chargeOutstandingAmount": null,
+        "chargeCount": null,
+        "feeScheduled": null,
+        "therapyChargeType": null,
+        "bilateralSurgeryFlag": null,
+        "emergencyCheckBox": null,
+        "diagnosisCode": null,
+        "BSSGChargeType": null,
+        "familyPlanningChargeLine": null,
+        "chargeFromDate": null,
+        "chargeToDate": null,
+        "chargeLineAmount": null,
+        "chargeAmountPerUnit": null,
+        "outcome": {
+            "action": null,
+            "errorText": null,
+            "attachmentType": null,
+            "attachmentStub": null,
+            "fixText": null,
+            "genericAdditionalText": null,
+            "allowManualOverride": null,
+            "userOverrideAvailable": null,
+            "nextClassStatus": null,
+            "informationClaimNote": null,
+            "overrideLegacyRuleId": null,
+            "forceDropReasonId": null,
+            "forceDrop": null,
+            "new_field": true,
+            "codingGuidelines": "UnitedHealthcare considers only Ambulance Suppliers eligible for reimbursement of ambulance services reported with HCPCS codes A0821 and A822 Non-Ambulance Suppliers should report CPT and/or HCPCS codes outside this range. Ambulance transportation claims must include a valid two-digit origin and destination modifier as per CMS guidelines. The letter \"X\" as an intermediate stop must be in the second position of the modifier. Services such as oxygen, drugs, extra attendants, supplies, EMS, and night differential are bundled into the ambulance transportation payment and not reimbursed separately."
+        }
+    }
+}

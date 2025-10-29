@@ -1,0 +1,15 @@
+# weights.yml
+# ---
+# Defines the business importance (weights) for each rule attribute.
+
+must_match:
+  policy.payer.name: 1.0
+  policy.document.type: 1.0
+
+should_match:
+  policy.benefit.coinsurance.value: 0.80
+  policy.limitations.summary: 0.90
+  policy.authorization.isRequired: 0.75
+  policy.codes.procedureCode: 0.95
+  policy.benefit.deductible.amount: 0.85
+  policy.coverage.status: 0.70
