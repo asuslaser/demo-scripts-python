@@ -1,0 +1,91 @@
+Here is a clear outline of the rules governing your comparison logic, followed by a detailed walkthrough using the provided data as an example.
+
+***
+
+### The Rules of the Comparison System
+
+This system operates in three distinct phases: Data Preparation, Comparison, and Decision Making.
+
+#### **Phase 1: Data Preparation**
+
+1.  **Rule 1: Flatten the Incoming Policy JSON.** The entire nested policy JSON file is converted into a single-level structure. Each key in this new structure represents the complete path to its value in the original JSON.
+2.  **Rule 2: Group and Flatten Existing Rules Data.** The data from the rules file is processed by grouping all rows that share the same Business Rule ID (`brid`). Each group is then converted into a single, flattened object representing one complete rule.
+
+#### **Phase 2: The Comparison Algorithm**
+
+The flattened policy is compared against each individual flattened rule. For every comparison, the following rules are applied:
+
+3.  **Rule 3: Compare Attribute Sets.** The system counts the attributes based on their presence in the policy and the rule:
+    * **`Count1` (Intersection):** The number of attributes that exist in *both* the policy and the rule.
+    * **`Count2` (Policy-Only):** The number of attributes that exist *only* in the policy.
+    * **`Count3` (Rule-Only):** The number of attributes that exist *only* in the rule.
+4.  **Rule 4: Compare Attribute Values.** For the common attributes identified in `Count1`, their values are compared:
+    * **`Count1_2` (Exact Match):** A counter for common attributes whose values are identical.
+    * **`Count1_3` (Similarity Match):** A counter for common attributes whose values are not identical but have a string similarity score greater than 70%.
+5.  **Rule 5: Calculate Similarity Score.** The final score is calculated using the following formula, which measures the proportion of matching attributes relative to the total set of unique attributes.
+    $$
+    \text{Similarity} = \frac{\text{Count1\_2} + \text{Count1\_3}}{\text{Count1} + \text{Count2} + \text{Count3}}
+    $$
+
+#### **Phase 3: Decision Logic**
+
+After the policy has been compared against all rules, the system makes a final decision based on the single highest score achieved.
+
+6.  **Rule 6: The "Update" Path.** If the highest similarity score is greater than 80% AND a mandatory check confirms the payor information matches, the policy is classified as an **Update**. An LLM is then called to generate an updated rule specification.
+7.  **Rule 7: The "New" Path.** If the highest similarity score is 80% or less, OR if the payor check fails, the policy is classified as **New**. An LLM is then called to verify it contains billing changes and generate a new rule specification.
+
+***
+
+### Walkthrough with an Example
+
+Let's trace the process using the provided files. We will compare the policy against the rule identified by `brid` = `0 BR0`.
+
+#### **1. Data Preparation**
+
+* **Flattened Policy Object (Sample):** The system processes `policy_json.txt` to create a flat structure. A small sample of this object would look like this:
+    * [cite_start]`rule.ruleMetaData.type`: `"Reimbursement Policy"` [cite: 20]
+    * [cite_start]`rule.ruleMetaData.ruleCriteria.keyInformation`: `"Reimbursement applies only to Ambulance Suppliers..."` [cite: 22]
+    * `charges.procedureCodes`: `["A0021", "A0225", "A0380", ...]`
+    * `charges.chargeLineAmount`: `null`
+
+* [cite_start]**Flattened Rule Object (`brid` = `0 BR0`):** The system processes `rule_attribute_embeddings_data.txt`, grouping the relevant rows[cite: 2, 3, 4, 5, 6, 7, 8]. The resulting object is:
+    * [cite_start]`rule_charges.chargelineamount_context`: `{"Any charge on claim"}` [cite: 2]
+    * [cite_start]`rule_charges.chargelineamount_section`: `{IF}` [cite: 3]
+    * [cite_start]`rule_charges.chargelineamount_operator`: `{"GREATER THAN OR EQUAL TO"}` [cite: 4]
+    * [cite_start]`rule_charges.chargeLineAmount`: `{0}` [cite: 5]
+    * [cite_start]`rule_payer.insurancePackage.claimrulecategory_section`: `{IF}` [cite: 6]
+    * [cite_start]`rule_payer.insurancePackage.claimrulecategory_operator`: `{IS}` [cite: 7]
+    * [cite_start]`rule_payer.insurancePackage.claimRuleCategory`: `{"Medicaid-CO [248]"}` [cite: 8]
+
+#### **2. Comparison of Policy vs. Rule `0 BR0`**
+
+*(For this step, we assume attribute names are normalized, e.g., `rule_charges.chargeLineAmount` and `charges.chargeLineAmount` are treated as the same key.)*
+
+* **Step 1: Attribute Set Counts**
+    * **`Count1` (Common Attributes):** The only attribute key found in both objects is `charges.chargeLineAmount`.
+        * **Result:** `Count1 = 1`
+    * **`Count2` (Policy-Only Attributes):** Keys like `rule.ruleMetaData.type`, `keyInformation`, and `procedureCodes` exist only in the policy.
+        * **Result:** `Count2` is a large number (e.g., `Count2 = 50+`).
+    * **`Count3` (Rule-Only Attributes):** Keys like `chargelineamount_context`, `chargelineamount_operator`, and `claimRuleCategory` exist only in the rule.
+        * **Result:** `Count3 = 6`
+
+* **Step 2: Value Match Counts**
+    * We only examine the single common attribute: `charges.chargeLineAmount`.
+    * **Policy Value:** `null`
+    * [cite_start]**Rule Value:** `{0}` [cite: 5]
+    * The values are not an exact match, nor are they similar.
+        * **Result:** `Count1_2 = 0`
+        * **Result:** `Count1_3 = 0`
+
+* **Step 3: Similarity Score Calculation**
+    * The numbers are plugged into the formula:
+    $$
+    \text{Similarity} = \frac{0 + 0}{1 + 50 + 6} = \frac{0}{57} \approx 0\%
+    $$
+
+#### **3. Decision**
+
+This calculation is repeated for all other rules. If, after all comparisons, the highest score achieved remains this low (e.g., 0%), the system would follow the "New" path:
+
+* **Decision:** The score is far below the 80% threshold, so the policy is classified as **New**.
+* **LLM Action:** The system would then send the full policy JSON to the LLM with a prompt such as: "Analyze this policy to confirm it contains billing rule changes and generate a new rule specification based on its content."
