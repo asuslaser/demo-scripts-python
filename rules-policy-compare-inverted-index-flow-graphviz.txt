@@ -1,0 +1,73 @@
+digraph FinalClarifiedFlow {
+    rankdir=TB;
+    node [shape=box, style="rounded,filled", fillcolor="#E9F5E9", fontname="Arial"];
+    edge [fontname="Arial"];
+
+    subgraph cluster_setup {
+        label = "Phase 1: Build the 'Rules Catalog' (One-Time Setup)";
+        style="rounded";
+        bgcolor="#F0F0F0";
+        
+        build_index_process [label="For each rule in the database:\nExtract key values (codes, IDs) and map them to the rule's ID.", align=left];
+        
+        inverted_index [shape=record, style="filled", fillcolor="#FFF2CC",
+            label="{ <f0> Inverted Index | { <f1> Value (Code/ID) | <f2> List of Rule IDs } | { 'A0425' | '{BR0123, BR4567}' } | { 'Medicaid-CO' | '{BR0123, BR7890}' } }"
+        ];
+        
+        build_index_process -> inverted_index [label="Creates"];
+    }
+
+    subgraph cluster_search {
+        label = "Phase 2: Find Potential Matches (Per Policy)";
+        style="rounded";
+        bgcolor="#F5F5F5";
+        
+        start [label="Start: A New Policy Arrives", shape=ellipse, style="filled", fillcolor="#D5E8D4"];
+        
+        // Path A
+        path_a [label="1a. Search by Meaning (Vector)\nAnalyzes policy text for conceptual similarity."];
+        
+        // Path B with explicit index lookup
+        path_b_extract [label="1b. Extract Codes from Policy\n(e.g., 'Medicaid-CO')"];
+        path_b_lookup [label="2b. Look up Codes in Inverted Index\nThis is a direct, fast query."];
+        
+        start -> path_a;
+        start -> path_b_extract;
+        path_b_extract -> path_b_lookup;
+        path_b_lookup -> inverted_index [label="Queries", dir=back, constraint=false, style=dashed];
+    }
+
+    subgraph cluster_review {
+        label = "Phase 3: Pick the Best Matches";
+        style="rounded";
+        bgcolor="#F5F5F5";
+        
+        combine_results [label="3. Combine Search Results\nFrom 'Meaning Search' & 'Code Search'.", align=left];
+        calculate_score [label="4. Calculate Final 'Match Score'", shape=note, style="filled", fillcolor="#FFF2CC"];
+        select_top [label="5. Create Shortlist of Top-N Rules", shape=diamond, style="filled", fillcolor="#F8CECC"];
+
+        path_a -> combine_results;
+        path_b_lookup -> combine_results [label="Returns List:\n[BR0123, BR7890]"];
+        combine_results -> calculate_score;
+        calculate_score -> select_top;
+    }
+
+    subgraph cluster_output {
+        label = "Phase 4: Create Final Report";
+        style="rounded";
+        bgcolor="#F5F5F5";
+        
+        loop_start [label="For each rule on the shortlist:", shape=Mdiamond];
+        side_by_side [label="6. Compare Side-by-Side"];
+        build_report [label="7. Add to Final Report"];
+        
+        loop_start -> side_by_side;
+        side_by_side -> build_report;
+        build_report -> loop_start [label="Next Rule", style=dashed];
+    }
+    
+    end_process [label="End: Deliver Final Report", shape=ellipse, style="filled", fillcolor="#D5E8D4"];
+    
+    select_top -> loop_start;
+    build_report -> end_process [label="After last rule", lhead=cluster_output];
+}
