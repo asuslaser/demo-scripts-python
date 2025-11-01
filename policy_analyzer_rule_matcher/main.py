@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 def load_config(path="config.json") -> dict:
-    # ... (no change to this function) ...
+    """Loads the central configuration file."""
     with open(path, 'r') as f:
         return json.load(f)
 
@@ -29,18 +29,25 @@ def flatten_json(y: dict) -> dict:
                 _flatten(item, f"{prefix}{i}.")
         else:
             # Store the value, stripping the last '.' from the key
-            # --- THIS IS THE FIX ---
-            # Original bug: flat_map[prefix.rstrip('.')] = v
             flat_map[prefix.rstrip('.')] = obj
-            # --- END FIX ---
 
     _flatten(y)
     return flat_map
 
 
-def load_rules_database(csv_path: str) -> dict:
-    # ... (no change to this function) ...
+def load_rules_database(csv_path: str, config: dict) -> dict:
+    """
+    Loads and groups the rules CSV data based on column names
+    defined in the config.
+    """
     print(f"Loading and grouping rules from {csv_path}...")
+
+    # Get column name mappings from config, with defaults
+    col_map = config.get("CSV_COLUMN_MAPPINGS", {})
+    col_rule_id = col_map.get("RULE_ID", "rule_id")
+    col_attr_path = col_map.get("ATTRIBUTE_PATH", "attribute_path")
+    col_attr_value = col_map.get("ATTRIBUTE_VALUE", "attribute_value")
+
     rules_db = {}
     try:
         df = pd.read_csv(csv_path, dtype=str)
@@ -49,13 +56,22 @@ def load_rules_database(csv_path: str) -> dict:
             print("Warning: Rules CSV is empty.")
             return {}
 
-        # Drop rows where 'rule_id' or 'attribute_path' is missing
-        df = df.dropna(subset=['rule_id', 'attribute_path'])
+        # Check if necessary columns exist
+        required_cols = [col_rule_id, col_attr_path, col_attr_value]
+        missing_cols = [col for col in required_cols if col not in df.columns]
+        if missing_cols:
+            print(f"Error: Rules CSV is missing required columns: {missing_cols}")
+            print(f"Please check your 'CSV_COLUMN_MAPPINGS' in config.json")
+            return {}
+
+        # Drop rows where essential columns are missing
+        df = df.dropna(subset=[col_rule_id, col_attr_path])
 
         for index, row in df.iterrows():
-            rule_id = row['rule_id']
-            attr_path = row['attribute_path']
-            attr_value = row['attribute_value']
+            rule_id = row[col_rule_id]
+            attr_path = row[col_attr_path]
+            # Handle cases where value might be missing but row is valid
+            attr_value = row.get(col_attr_value)
 
             if rule_id not in rules_db:
                 rules_db[rule_id] = {}
@@ -77,7 +93,10 @@ def load_rules_database(csv_path: str) -> dict:
 
 
 def compare_policy_to_rules(policy_map: dict, policy_filename: str, rules_db: dict, config: dict) -> (dict, list):
-    # ... (no change to this function) ...
+    """
+    Compares a single flattened policy_map to all rules in the rules_db.
+    Returns a dict of scores and a detailed trace list.
+    """
     scores = {}
     trace_log = []  # This will store our detailed trace data
 
@@ -187,7 +206,8 @@ def compare_policy_to_rules(policy_map: dict, policy_filename: str, rules_db: di
 
 
 def get_final_decision(policy_map: dict, rules_db: dict, scores: dict, config: dict) -> (str, str, float):
-    # ... (no change to this function) ...
+    """Determines the final 'New' or 'Update' decision."""
+
     if not scores:
         return "New", "N/A", 0.0
 
@@ -215,10 +235,12 @@ def get_final_decision(policy_map: dict, rules_db: dict, scores: dict, config: d
         rule_payor_norm = string_similarity.normalize(best_rule_payor)
 
         payor_is_match = False
+        # Check for null/None on both sides
         if policy_payor_norm == rule_payor_norm:
             payor_is_match = True
-        elif string_similarity.jaro_winkler_match(policy_payor_norm, rule_payor_norm, payor_thresh):
-            payor_is_match = True
+        elif policy_payor_norm and rule_payor_norm:  # Only check fuzzy if both exist
+            if string_similarity.jaro_winkler_match(policy_payor_norm, rule_payor_norm, payor_thresh):
+                payor_is_match = True
 
         if payor_is_match:
             decision = "Update"
@@ -229,16 +251,18 @@ def get_final_decision(policy_map: dict, rules_db: dict, scores: dict, config: d
 
 
 def main():
-    # ... (no change to this function) ...
+    """Main execution block."""
     config = load_config("config.json")
+    print("Loading configuration from config.json...")
+
     paths = config.get("FILE_PATHS", {})
 
     # Ensure output directory exists
     output_dir = Path(paths.get("OUTPUT_CSV_PATH", "output/results.csv")).parent
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Load rules once
-    rules_db = load_rules_database(paths.get("RULES_CSV_PATH"))
+    # Load rules once, passing in the config
+    rules_db = load_rules_database(paths.get("RULES_CSV_PATH"), config)
     if not rules_db:
         print("Halting execution: Rules database is empty or failed to load.")
         return
@@ -246,7 +270,13 @@ def main():
     policy_folder = paths.get("POLICY_JSON_FOLDER")
     print(f"\nProcessing policy JSON files from {policy_folder}...")
 
-    policy_files = [f for f in os.listdir(policy_folder) if f.endswith('.json')]
+    policy_files = []
+    try:
+        policy_files = [f for f in os.listdir(policy_folder) if f.endswith('.json')]
+    except FileNotFoundError:
+        print(f"Error: Policy folder not found at {policy_folder}")
+        return
+
     if not policy_files:
         print(f"No .json files found in {policy_folder}")
         return
@@ -278,7 +308,10 @@ def main():
                 # Reorder columns for readability
                 cols = ["policy_file", "rule_id", "comparison_type", "attribute_path",
                         "policy_value", "rule_value", "match_type", "score_contribution"]
-                trace_df = trace_df[cols]
+
+                # Filter to only include columns that actually exist
+                existing_cols = [col for col in cols if col in trace_df.columns]
+                trace_df = trace_df[existing_cols]
 
                 # Sort for easier analysis
                 trace_df = trace_df.sort_values(by=["rule_id", "comparison_type", "attribute_path"])

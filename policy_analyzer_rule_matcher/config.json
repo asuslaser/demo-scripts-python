@@ -4,14 +4,20 @@
     "POLICY_JSON_FOLDER": "policy_jsons/",
     "OUTPUT_CSV_PATH": "output/results.csv"
   },
+  "CSV_COLUMN_MAPPINGS": {
+    "RULE_ID": "rule_id",
+    "ATTRIBUTE_PATH": "attribute_path",
+    "ATTRIBUTE_VALUE": "attribute_value"
+  },
   "MATCH_THRESHOLDS": {
-    "MAIN_SIMILARITY_THRESHOLD": 0.80,
-    "FUZZY_STRING_THRESHOLD": 0.90,
-    "LONG_STRING_JACCARD_THRESHOLD": 0.90
+    "MAIN_SIMILARITY_THRESHOLD": 0.8,
+    "FUZZY_STRING_THRESHOLD": 0.9,
+    "LONG_STRING_JACCARD_THRESHOLD": 0.9
   },
   "LOGIC_CONTROLS": {
-    "LONG_STRING_CHAR_LIMIT": 50,
     "PAYOR_MATCH_ATTRIBUTE": "rule.ruleMetaData.payor",
-    "PAYOR_MATCH_THRESHOLD": 0.90
+    "PAYOR_MATCH_THRESHOLD": 0.9,
+    "LONG_STRING_CHAR_LIMIT": 50
   }
 }
+
