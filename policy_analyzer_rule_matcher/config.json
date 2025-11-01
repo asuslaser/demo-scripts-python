@@ -1,0 +1,17 @@
+{
+  "FILE_PATHS": {
+    "RULES_CSV_PATH": "rule_data/test_rules.csv",
+    "POLICY_JSON_FOLDER": "policy_jsons/",
+    "OUTPUT_CSV_PATH": "output/results.csv"
+  },
+  "MATCH_THRESHOLDS": {
+    "MAIN_SIMILARITY_THRESHOLD": 0.80,
+    "FUZZY_STRING_THRESHOLD": 0.90,
+    "LONG_STRING_JACCARD_THRESHOLD": 0.90
+  },
+  "LOGIC_CONTROLS": {
+    "LONG_STRING_CHAR_LIMIT": 50,
+    "PAYOR_MATCH_ATTRIBUTE": "rule.ruleMetaData.payor",
+    "PAYOR_MATCH_THRESHOLD": 0.90
+  }
+}

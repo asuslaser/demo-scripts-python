@@ -1,0 +1,6 @@
+policy_file,decision,best_match_rule_id,similarity_score
+policy1.json,New,BR_TEST_01,2.56%
+policy_fuzzy_match.json,Update,BR_TEST_02,87.50%
+policy_new.json,New,BR_TEST_01,0.00%
+policy_payor_mismatch.json,New (Payor Mismatch),BR_TEST_01,87.50%
+policy_update.json,Update,BR_TEST_01,88.89%

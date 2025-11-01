@@ -1,0 +1,14 @@
+{
+  "rule": {
+    "ruleMetaData": {
+      "type": "Dental Policy",
+      "payor": "MetLife",
+      "lineOfBusiness": "Dental PPO"
+    },
+    "charges": {
+      "cptCode": "D2740",
+      "modifier": null,
+      "providerSpecialty": "Dentist"
+    }
+  }
+}
