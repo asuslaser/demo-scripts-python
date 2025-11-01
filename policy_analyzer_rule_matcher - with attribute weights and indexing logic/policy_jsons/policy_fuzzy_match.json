@@ -1,0 +1,21 @@
+{
+  "rule": {
+    "ruleMetaData": {
+      "type": "Profesional Policy",
+      "payor": "Cigna",
+      "ruleCriteria": {
+        "keyInformation": "The quick brown fox jumps over the lazy cat. This is a test paragraph for jaccard similarity on long strings."
+      }
+    },
+    "charges": {
+      "cptCode": "99213",
+      "modifier": "25",
+      "providerSpecialty": "Cardiolgy",
+      "outcome": {
+        "action": "Pend",
+        "new_field_for_policy": true
+      }
+    }
+  }
+}
+

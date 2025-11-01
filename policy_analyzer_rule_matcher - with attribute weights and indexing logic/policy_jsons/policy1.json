@@ -1,0 +1,100 @@
+{
+  "rule": {
+    "ruleMetaData": {
+      "id": null,
+      "type": "Reimbursement Policy",
+      "requestType": null,
+      "requesterCategory": null,
+      "transferredBy": null,
+      "serviceDate": null,
+      "claimAmount": null,
+      "referralAuthorization": {
+        "authorizationNumber": null
+      },
+      "billingGroup": {
+        "claimType": null,
+        "healthCareClaimType": null
+      },
+      "ruleCriteria": {
+        "action": null,
+        "businessReason": {
+          "impact": "Claims without valid two-digit ambulance modifiers will be denied.",
+          "explanation": "UnitedHealthcare reimbursement policies align with CMS guidelines and require accurate coding and modifier usage to ensure proper reimbursement. The policy is subject to change and updates are published accordingly."
+        },
+        "applyToAllUsersForService": null,
+        "nextClaimStatus": null,
+        "allowManualOverride": null,
+        "documentDate": null,
+        "keyInformation": "Reimbursement applies only to Ambulance Suppliers reporting 0000 codes A0021 and A0225 - A0999. Non-Ambulance Suppliers will not be reimbursed for ambulance services. Ambulance transportation claims require a valid two-digit origin and destination modifier; claims without valid modifiers will be denied. The letter 'A' is an intermediate stop modifier used in the second position. If in the first position, the claim will be denied. Services such as surgery, surgery, aftercare, outpatient, etc. and might differential are..."
+      },
+      "ruleId": null,
+      "ruleVersion": null,
+      "ruleStatus": null,
+      "effectiveDate": null,
+      "expirationDate": null,
+      "payor": "Aetna",
+      "lineOfBusiness": null,
+      "claimRuleCategory": null,
+      "claimRuleType": null,
+      "claimRuleId": null,
+      "brid": null
+    },
+    "payer": {
+      "insurancePackage": {
+        "claimRuleCategory": null,
+        "claimRuleId": null
+      }
+    },
+    "charges": {
+      "cptCode": null,
+      "modifier": null,
+      "revenueCode": null,
+      "placeOfService": null,
+      "procedureCode": null,
+      "diagnosisCodeType": null,
+      "cptCodeFromCharge": null,
+      "modifierFromCharge": null,
+      "revenueCodeFromCharge": null,
+      "diagnosisCodeFromCharge": null,
+      "diagnosisCodePointer": null,
+      "providerSpecialty": null,
+      "attendingProviderSpecialty": null,
+      "referringProviderSpecialty": null,
+      "pcpSpecialty": null,
+      "providerNetworkStatus": null,
+      "chargeTelehealthStatus": null,
+      "chargeOutputLabel": null,
+      "placeOfServiceFromCharge": null,
+      "chargeOutstandingAmount": null,
+      "chargeCount": null,
+      "feeScheduled": null,
+      "therapyChargeType": null,
+      "bilateralSurgeryFlag": null,
+      "emergencyCheckBox": null,
+      "diagnosisCode": null,
+      "BSSGChargeType": null,
+      "familyPlanningChargeLine": null,
+      "chargeFromDate": null,
+      "chargeToDate": null,
+      "chargeLineAmount": null,
+      "chargeAmountPerUnit": null,
+      "outcome": {
+        "action": null,
+        "errorText": null,
+        "attachmentType": null,
+        "attachmentStub": null,
+        "fixText": null,
+        "genericAdditionalText": null,
+        "allowManualOverride": null,
+        "userOverrideAvailable": null,
+        "nextClassStatus": null,
+        "informationClaimNote": null,
+        "overrideLegacyRuleId": null,
+        "forceDropReasonId": null,
+        "forceDrop": null,
+        "new_field": true,
+        "codingGuidelines": "UnitedHealthcare considers only Ambulance Suppliers eligible for reimbursement of ambulance services reported with HCPCS codes A0821 and A822 Non-Ambulance Suppliers should report CPT and/or HCPCS codes outside this range. Ambulance transportation claims must include a valid two-digit origin and destination modifier as per CMS guidelines. The letter \"X\" as an intermediate stop..."
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "rule": {
+    "ruleMetaData": {
+      "type": "Reimbursement Policy",
+      "payor": "Cigna",
+      "lineOfBusiness": "Commercial",
+      "ruleCriteria": {
+        "keyInformation": "This is the key information for rule 01. It is about ambulance suppliers."
+      }
+    },
+    "charges": {
+      "cptCode": "A0021",
+      "modifier": "AA",
+      "providerNetworkStatus": "In-Network",
+      "outcome": {
+        "action": "Deny"
+      }
+    }
+  }
+}

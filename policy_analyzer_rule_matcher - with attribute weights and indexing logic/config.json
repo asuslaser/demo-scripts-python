@@ -1,0 +1,35 @@
+{
+  "FILE_PATHS": {
+    "RULES_CSV_PATH": "rule_data/test_rules.csv",
+    "POLICY_JSON_FOLDER": "policy_jsons/",
+    "OUTPUT_CSV_PATH": "output/results.csv"
+  },
+  "CSV_COLUMN_MAPPINGS": {
+    "RULE_ID": "rule_id",
+    "ATTRIBUTE_PATH": "attribute_path",
+    "ATTRIBUTE_VALUE": "attribute_value"
+  },
+  "MATCH_THRESHOLDS": {
+    "MAIN_SIMILARITY_THRESHOLD": 0.8,
+    "FUZZY_STRING_THRESHOLD": 0.9,
+    "LONG_STRING_JACCARD_THRESHOLD": 0.9
+  },
+  "LOGIC_CONTROLS": {
+    "TOP_N_MATCHES": 3,
+    "PAYOR_MATCH_ATTRIBUTE": "rule.ruleMetaData.payor",
+    "PAYOR_MATCH_THRESHOLD": 0.9,
+    "LONG_STRING_CHAR_LIMIT": 50,
+    "ENABLE_WEIGHTING": false,
+    "ENABLE_PREFILTERING": false,
+    "PREFILTER_INDEX_ATTRIBUTE": "rule.ruleMetaData.type"
+  },
+  "ATTRIBUTE_WEIGHTS": {
+    "_default_weight": 1,
+    "rule.ruleMetaData.payor": 10,
+    "rule.ruleMetaData.type": 5,
+    "rule.charges.cptCode": 3,
+    "rule.charges.modifier": 3
+  }
+}
+
+

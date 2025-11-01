@@ -1,0 +1,21 @@
+{
+  "rule": {
+    "ruleMetaData": {
+      "type": "Reimbursement Policy",
+      "payor": "Aetna",
+      "lineOfBusiness": "Commercial",
+      "ruleCriteria": {
+        "keyInformation": "This is the key information for rule 01. It is about ambulance suppliers."
+      }
+    },
+    "charges": {
+      "cptCode": "A0021",
+      "modifier": "AA",
+      "providerNetworkStatus": "In-Network",
+      "outcome": {
+        "action": "Deny",
+        "new_field_for_policy": true
+      }
+    }
+  }
+}
