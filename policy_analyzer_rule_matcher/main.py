@@ -107,6 +107,8 @@ def compare_policy_to_rules(policy_map: dict, policy_filename: str, rules_db: di
     fuzzy_thresh = cfg_thresholds.get("FUZZY_STRING_THRESHOLD", 0.9)
     jaccard_thresh = cfg_thresholds.get("LONG_STRING_JACCARD_THRESHOLD", 0.9)
 
+    no_match_string = "No attribute match for exact or fuzzy comparison"
+
     for rule_id, rule_map in rules_db.items():
         policy_keys = set(policy_map.keys())
         rule_keys = set(rule_map.keys())
@@ -177,7 +179,7 @@ def compare_policy_to_rules(policy_map: dict, policy_filename: str, rules_db: di
                 "policy_value": policy_map.get(key),
                 "rule_value": None,
                 "comparison_type": "Policy-Only (Count2)",
-                "match_type": "N/A",
+                "match_type": no_match_string,
                 "score_contribution": 0
             })
 
@@ -190,7 +192,7 @@ def compare_policy_to_rules(policy_map: dict, policy_filename: str, rules_db: di
                 "policy_value": None,
                 "rule_value": rule_map.get(key),
                 "comparison_type": "Rule-Only (Count3)",
-                "match_type": "N/A",
+                "match_type": no_match_string,
                 "score_contribution": 0
             })
 
@@ -205,24 +207,48 @@ def compare_policy_to_rules(policy_map: dict, policy_filename: str, rules_db: di
     return scores, trace_log
 
 
-def get_final_decision(policy_map: dict, rules_db: dict, scores: dict, config: dict) -> (str, str, float):
-    """Determines the final 'New' or 'Update' decision."""
+def analyze_scores_and_decide(policy_map: dict, rules_db: dict, scores: dict, config: dict) -> (str, str, float, list):
+    """
+    Analyzes all scores, finds the top N, and determines the final decision.
+    Returns: (decision, best_rule_id, best_score, top_n_list)
+    """
+    cfg_logic = config.get("LOGIC_CONTROLS", {})
+    cfg_thresholds = config.get("MATCH_THRESHOLDS", {})
+
+    top_n_count = cfg_logic.get("TOP_N_MATCHES", 1)
+    no_match_string = "No Match Found"
 
     if not scores:
-        return "New", "N/A", 0.0
+        return "New", no_match_string, 0.0, []
 
-    # Find the best matching rule
-    best_rule_id = max(scores, key=scores.get)
-    max_score = scores[best_rule_id]
+    # Sort all scores
+    sorted_scores = sorted(scores.items(), key=lambda item: item[1], reverse=True)
 
-    main_threshold = config.get("MATCH_THRESHOLDS", {}).get("MAIN_SIMILARITY_THRESHOLD", 0.8)
+    # Get the Top N
+    top_n_list_raw = sorted_scores[:top_n_count]
+
+    # Format the Top N list for output
+    top_n_list_formatted = [
+        {"rule_id": rule_id, "score_pct": f"{score * 100:.2f}%"}
+        for rule_id, score in top_n_list_raw
+    ]
+
+    # The best match is always the first one
+    best_rule_id, max_score = top_n_list_raw[0]
+
+    # --- UPDATED FIX: Handle 0.0 score case ---
+    if max_score == 0.0:
+        best_rule_id = no_match_string
+        top_n_list_formatted = []  # Clear the list, as it's just 0.0 scores
+    # --- END FIX ---
+
+    main_threshold = cfg_thresholds.get("MAIN_SIMILARITY_THRESHOLD", 0.8)
 
     # Default decision
     decision = "New"
 
     if max_score >= main_threshold:
         # If score is high, check payor match before declaring "Update"
-        cfg_logic = config.get("LOGIC_CONTROLS", {})
         payor_attr = cfg_logic.get("PAYOR_MATCH_ATTRIBUTE")
         payor_thresh = cfg_logic.get("PAYOR_MATCH_THRESHOLD", 0.9)
 
@@ -247,7 +273,7 @@ def get_final_decision(policy_map: dict, rules_db: dict, scores: dict, config: d
         else:
             decision = "New (Payor Mismatch)"
 
-    return decision, best_rule_id, max_score
+    return decision, best_rule_id, max_score, top_n_list_formatted
 
 
 def main():
@@ -282,6 +308,7 @@ def main():
         return
 
     final_results = []
+    all_trace_data = []  # <-- For consolidated trace file
 
     for policy_filename in policy_files:
         policy_filepath = os.path.join(policy_folder, policy_filename)
@@ -296,10 +323,14 @@ def main():
             # Compare policy to all rules and get trace data
             scores, trace_data = compare_policy_to_rules(policy_map, policy_filename, rules_db, config)
 
-            # Get final decision
-            decision, best_rule_id, max_score = get_final_decision(policy_map, rules_db, scores, config)
+            all_trace_data.extend(trace_data)  # <-- Add to consolidated list
 
-            # --- Save Trace CSV ---
+            # Get final decision and Top N list
+            decision, best_rule_id, max_score, top_n_matches = analyze_scores_and_decide(
+                policy_map, rules_db, scores, config
+            )
+
+            # --- Save Individual Trace CSV ---
             if trace_data:
                 trace_filename = f"trace_{Path(policy_filename).stem}.csv"
                 trace_csv_path = output_dir / trace_filename
@@ -327,7 +358,8 @@ def main():
                 "policy_file": policy_filename,
                 "decision": decision,
                 "best_match_rule_id": best_rule_id,
-                "similarity_score": f"{max_score * 100:.2f}%"
+                "similarity_score_pct": f"{max_score * 100:.2f}%",
+                "top_n_matches": json.dumps(top_n_matches)  # Store Top N as a JSON string
             })
 
         except json.JSONDecodeError:
@@ -335,22 +367,49 @@ def main():
             final_results.append({
                 "policy_file": policy_filename,
                 "decision": "Error",
-                "best_match_rule_id": "N/A",
-                "similarity_score": "N/A"
+                "best_match_rule_id": "No Match Found",
+                "similarity_score_pct": "N/A",
+                "top_n_matches": "[]"
             })
         except Exception as e:
             print(f"  - An unexpected error occurred with {policy_filename}: {e}")
             final_results.append({
                 "policy_file": policy_filename,
                 "decision": "Error",
-                "best_match_rule_id": "N/A",
-                "similarity_score": "N/A"
+                "best_match_rule_id": "No Match Found",
+                "similarity_score_pct": "N/A",
+                "top_n_matches": "[]"
             })
+
+    # --- Save Consolidated Trace CSV ---
+    if all_trace_data:
+        all_trace_csv_path = output_dir / "trace_all.csv"
+        all_trace_df = pd.DataFrame(all_trace_data)
+
+        # Reorder columns for readability
+        cols = ["policy_file", "rule_id", "comparison_type", "attribute_path",
+                "policy_value", "rule_value", "match_type", "score_contribution"]
+        existing_cols = [col for col in cols if col in all_trace_df.columns]
+        all_trace_df = all_trace_df[existing_cols]
+
+        # Sort for easier analysis
+        all_trace_df = all_trace_df.sort_values(by=["policy_file", "rule_id", "comparison_type", "attribute_path"])
+        all_trace_df.to_csv(all_trace_csv_path, index=False, quoting=csv.QUOTE_ALL)
+        print(f"\nConsolidated trace log saved to {all_trace_csv_path}")
 
     # Save final summary results
     summary_csv_path = paths.get("OUTPUT_CSV_PATH", "output/results.csv")
     if final_results:
         summary_df = pd.DataFrame(final_results)
+        # Define column order for the final CSV
+        summary_cols = [
+            "policy_file",
+            "decision",
+            "best_match_rule_id",
+            "similarity_score_pct",
+            "top_n_matches"
+        ]
+        summary_df = summary_df[summary_cols]
         summary_df.to_csv(summary_csv_path, index=False)
 
     print(f"\nAll processing complete. Summary results saved to {summary_csv_path}")
